@@ -1,0 +1,83 @@
+@use 'variables' as *;
+
+// Миксины
+@mixin respond($bp) {
+  @if $bp == mobile {
+    @media (min-width: $bp-mobile) { @content; }
+  } @else if $bp == tablet {
+    @media (min-width: $bp-tablet) { @content; }
+  } @else if $bp == desktop {
+    @media (min-width: $bp-desktop) { @content; }
+  } @else if $bp == wide {
+    @media (min-width: $bp-wide) { @content; }
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $container-max;
+  margin: 0 auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+@mixin section-padding {
+  padding-top: $space-16;
+  padding-bottom: $space-16;
+
+  @include respond(tablet) {
+    padding-top: $space-20;
+    padding-bottom: $space-20;
+  }
+
+  @include respond(desktop) {
+    padding-top: $space-24;
+    padding-bottom: $space-24;
+  }
+}
+
+@mixin heading-xl {
+  font-size: $font-size-3xl;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+
+  @include respond(tablet) {
+    font-size: $font-size-4xl;
+  }
+
+  @include respond(desktop) {
+    font-size: $font-size-5xl;
+  }
+}
+
+@mixin heading-lg {
+  font-size: $font-size-2xl;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+
+  @include respond(tablet) {
+    font-size: $font-size-3xl;
+  }
+}
+
+@mixin heading-md {
+  font-size: $font-size-xl;
+  font-weight: 600;
+  line-height: 1.3;
+
+  @include respond(tablet) {
+    font-size: $font-size-2xl;
+  }
+}
+
+@mixin text-body {
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $color-text-secondary;
+
+  @include respond(tablet) {
+    font-size: $font-size-lg;
+  }
+}

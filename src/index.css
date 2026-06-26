@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #1d8ccb;
+  --color-accent-hover: #166fa3;
+  --font-sans: "Geist", "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    @apply bg-white text-zinc-900;
+  }
+}
+
+/* Custom Utilities */
+@utility container-custom {
+  @apply max-w-7xl mx-auto px-6;
+}

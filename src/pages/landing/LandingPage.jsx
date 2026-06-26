@@ -1,0 +1,25 @@
+import { Header } from '../../widgets/header/Header';
+import { Hero } from '../../widgets/hero/Hero';
+import { About } from '../../widgets/about/About';
+import { Services } from '../../widgets/services/Services';
+import { Advantages } from '../../widgets/advantages/Advantages';
+import { Steps } from '../../widgets/steps/Steps';
+import { Faq } from '../../widgets/faq/Faq';
+import { Footer } from '../../widgets/footer/Footer';
+
+export function LandingPage() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Advantages />
+        <Steps />
+        <Faq />
+      </main>
+      <Footer />
+    </>
+  );
+}
