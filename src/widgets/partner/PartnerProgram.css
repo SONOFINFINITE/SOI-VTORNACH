@@ -1,0 +1,70 @@
+/* Специфические правки для iPad Pro (1024px), чтобы он выглядел как iPad Air/Mini */
+@media (min-width: 1024px) and (max-width: 1180px) {
+  .partner-program-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .partner-program-left {
+    grid-column: span 1 !important;
+  }
+
+  .partner-program-right {
+    grid-column: span 1 !important;
+    padding-top: 0 !important;
+  }
+
+  .partner-program-header {
+    text-align: center !important;
+  }
+
+  .partner-program-header p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Статистика в горизонтальный ряд как на планшете */
+  .partner-program-stats {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+  }
+
+  .partner-program-stats .bg-zinc-100 {
+    width: 1px !important;
+    height: 3rem !important;
+    display: block !important;
+  }
+
+  .partner-program-stat-item {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .partner-program-stat-item div:last-child {
+    text-align: center !important;
+  }
+
+  /* Карточки и кнопка */
+  .partner-program-cards {
+    text-align: center !important;
+  }
+
+  .partner-program-cards .flex {
+    justify-content: center !important;
+  }
+
+  .partner-program-cta {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .partner-program-cta-text {
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .partner-program-cta-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}

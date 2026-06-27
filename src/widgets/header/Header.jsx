@@ -4,6 +4,7 @@ import { List, X, Phone } from '@phosphor-icons/react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { CONTACT_INFO } from '../../shared/constants';
+import './Header.css';
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
@@ -14,6 +15,7 @@ const NAV_ITEMS = [
   { label: 'Услуги', href: '#services' },
   { label: 'Преимущества', href: '#advantages' },
   { label: 'Этапы', href: '#steps' },
+  { label: 'Партнерам', href: '#partners' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -68,16 +70,16 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 xl:px-6 flex items-center justify-between">
         <a href="/" className="flex items-center group py-2">
-          <img src="/LOGO.png" alt="Второе Начало" className="h-20 md:h-22 xl:h-24 w-auto transition-transform group-hover:scale-105" />
+          <img src="/LOGO.png" alt="Второе Начало" className="header-logo w-auto transition-transform group-hover:scale-105 h-16 md:h-20" />
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-4 xl:gap-10">
+        <nav className="hidden xl:flex items-center header-nav">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="relative text-sm xl:text-lg font-bold text-zinc-600 hover:text-accent transition-colors py-2 group/link"
+              className="relative header-nav-link font-bold text-zinc-600 hover:text-accent transition-colors py-2 group/link whitespace-nowrap"
               onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.label}
@@ -86,18 +88,18 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3 xl:gap-8">
+        <div className="hidden xl:flex items-center gap-3 xl:gap-6">
           <a 
             href={CONTACT_INFO.phone.link} 
-            className="flex items-center gap-2 text-base xl:text-xl font-black text-zinc-900 hover:text-accent transition-colors"
+            className="flex items-center gap-2 header-phone-text font-black text-zinc-900 hover:text-accent transition-colors whitespace-nowrap"
           >
-            <Phone size={22} weight="fill" className="text-accent" />
+            <Phone size={20} weight="fill" className="text-accent" />
             <span className="hidden xl:inline">{CONTACT_INFO.phone.display}</span>
             <span className="xl:hidden">{CONTACT_INFO.phone.displayShort}</span>
           </a>
           <a 
             href={CONTACT_INFO.phone.link}
-            className="bg-accent hover:bg-accent-hover text-white px-4 xl:px-7 py-2.5 xl:py-3.5 rounded-full text-sm xl:text-lg font-black transition-all hover:scale-105 active:scale-95 shadow-xl shadow-accent/20 cursor-pointer"
+            className="header-cta-btn bg-accent hover:bg-accent-hover text-white px-3 xl:px-6 py-2 xl:py-3 rounded-full text-xs xl:text-base font-black transition-all hover:scale-105 active:scale-95 shadow-xl shadow-accent/20 cursor-pointer whitespace-nowrap"
           >
             Консультация
           </a>
@@ -105,7 +107,7 @@ export function Header() {
 
         {/* Mobile Burger */}
         <button
-          className="lg:hidden p-2 text-zinc-900"
+          className="xl:hidden p-2 text-zinc-900"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Меню"
         >
@@ -123,14 +125,14 @@ export function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full left-0 right-0 h-screen bg-black/20 backdrop-blur-sm lg:hidden"
+              className="absolute top-full left-0 right-0 h-screen bg-black/20 backdrop-blur-sm xl:hidden"
               onClick={() => setMenuOpen(false)}
             />
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 right-0 bg-white border-b border-zinc-200 p-6 lg:hidden shadow-xl"
+              className="absolute top-full left-0 right-0 bg-white border-b border-zinc-200 p-6 xl:hidden shadow-xl"
             >
             <div className="flex flex-col gap-6">
               {NAV_ITEMS.map((item) => (
@@ -165,7 +167,7 @@ export function Header() {
     </header>
 
     {/* Floating Call Button for Mobile - Outside header for stable fixed positioning */}
-    <div className="fixed bottom-6 right-6 z-[60] lg:hidden pointer-events-auto">
+    <div className="fixed bottom-6 right-6 z-[60] xl:hidden pointer-events-auto">
       <motion.a
         href={CONTACT_INFO.phone.link}
         initial={{ scale: 0, opacity: 0 }}

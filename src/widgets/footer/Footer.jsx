@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { label: 'Услуги', href: '#services' },
   { label: 'Преимущества', href: '#advantages' },
   { label: 'Этапы', href: '#steps' },
+  { label: 'Партнерам', href: '#partners' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -14,7 +15,14 @@ export function Footer() {
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 80;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -24,7 +32,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 gap-12 xl:gap-16 mb-16 md:mb-24">
           
           {/* Brand Section */}
-          <div className="md:col-span-6 xl:col-span-4">
+          <div className="md:col-span-6 xl:col-span-5">
             <div className="mb-8 md:mb-10 flex flex-col items-center xl:items-start text-center xl:text-left">
               <img src="/LOGO.png" alt="Второе Начало" className="h-20 md:h-24 w-auto mb-6" />
               <p className="text-sm leading-relaxed max-w-[320px] text-zinc-400 mx-auto xl:mx-0">
@@ -42,7 +50,7 @@ export function Footer() {
           </div>
 
           {/* Navigation */}
-          <div className="md:col-span-2 xl:col-span-2">
+          <div className="md:col-span-3 xl:col-span-3">
             <div className="text-base md:text-lg font-black text-accent uppercase tracking-[0.2em] mb-6 md:mb-8">
               Навигация
             </div>
@@ -61,7 +69,7 @@ export function Footer() {
           </div>
 
           {/* Contacts */}
-          <div className="md:col-span-2 xl:col-span-3">
+          <div className="md:col-span-3 xl:col-span-4">
             <div className="text-base md:text-lg font-black text-accent uppercase tracking-[0.2em] mb-6 md:mb-8">
               Контакты
             </div>
@@ -78,22 +86,6 @@ export function Footer() {
                 </div>
                 <div className="text-sm font-bold text-zinc-500 group-hover:text-accent transition-colors">{CONTACT_INFO.email}</div>
               </a>
-            </div>
-          </div>
-
-          {/* Location */}
-          <div className="md:col-span-2 xl:col-span-3">
-            <div className="text-base md:text-lg font-black text-accent uppercase tracking-[0.2em] mb-6 md:mb-8">
-              Офис
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-full bg-zinc-50 flex items-center justify-center text-zinc-400 shrink-0">
-                <MapPin size={18} weight="fill" />
-              </div>
-              <div className="text-sm font-bold text-zinc-500 leading-relaxed">
-                {CONTACT_INFO.address.city}, {CONTACT_INFO.address.street} <br />
-                {CONTACT_INFO.address.hours}
-              </div>
             </div>
           </div>
         </div>

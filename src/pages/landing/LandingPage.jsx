@@ -1,6 +1,7 @@
 import { Header } from '../../widgets/header/Header';
 import { Hero } from '../../widgets/hero/Hero';
 import { About } from '../../widgets/about/About';
+import { PartnerProgram } from '../../widgets/partner/PartnerProgram';
 import { Services } from '../../widgets/services/Services';
 import { Advantages } from '../../widgets/advantages/Advantages';
 import { Steps } from '../../widgets/steps/Steps';
@@ -14,6 +15,7 @@ export function LandingPage() {
       <main>
         <Hero />
         <About />
+        <PartnerProgram />
         <Services />
         <Advantages />
         <Steps />
