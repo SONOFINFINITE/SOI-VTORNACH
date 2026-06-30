@@ -47,6 +47,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          style={{ willChange: 'transform, opacity' }}
           src="/MAN_FOR_HERO.png" 
           alt="Юрист" 
           className="absolute bottom-0 right-0 h-[130%] w-auto object-contain object-bottom drop-shadow-2xl"
@@ -103,19 +104,19 @@ export function Hero() {
             className="grid grid-cols-1 md:grid-cols-3 gap-0 mt-16 border border-zinc-100 rounded-[2.5rem] overflow-hidden bg-zinc-50/50 backdrop-blur-sm lg:max-w-xl"
           >
             <div className="p-8 border-b md:border-b-0 md:border-r border-zinc-100 hover:bg-accent transition-all duration-500 group">
-              <div className="text-3xl font-black text-zinc-900 mb-2 tracking-tighter group-hover:text-white transition-colors">
+              <div className="text-3xl font-black text-zinc-900 mb-2 tracking-tighter group-hover:text-white transition-colors whitespace-nowrap">
                 <Counter value={1500} suffix="+" />
               </div>
               <div className="text-[10px] text-zinc-400 uppercase tracking-[0.2em] font-bold group-hover:text-white/80 transition-colors">Успешных дел</div>
             </div>
             <div className="p-8 border-b md:border-b-0 md:border-r border-zinc-100 hover:bg-accent transition-all duration-500 group">
-              <div className="text-3xl font-black text-zinc-900 mb-2 tracking-tighter group-hover:text-white transition-colors">
+              <div className="text-3xl font-black text-zinc-900 mb-2 tracking-tighter group-hover:text-white transition-colors whitespace-nowrap">
                 <Counter value={1.8} suffix=" млрд" />
               </div>
               <div className="text-[10px] text-zinc-400 uppercase tracking-[0.2em] font-bold group-hover:text-white/80 transition-colors">Списано ₽</div>
             </div>
             <div className="p-8 hover:bg-accent transition-all duration-500 group">
-              <div className="text-3xl font-black text-zinc-900 mb-2 tracking-tighter group-hover:text-white transition-colors">
+              <div className="text-3xl font-black text-zinc-900 mb-2 tracking-tighter group-hover:text-white transition-colors whitespace-nowrap">
                 <Counter value={100} suffix="%" />
               </div>
               <div className="text-[10px] text-zinc-400 uppercase tracking-[0.2em] font-bold group-hover:text-white/80 transition-colors">Гарантия</div>

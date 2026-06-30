@@ -26,7 +26,7 @@ const FEATURES = [
 
 export function About() {
   return (
-    <section className="pt-20 md:pt-16 lg:pt-32 pb-12 md:pb-0 lg:pb-16 bg-white text-zinc-900 overflow-hidden relative" id="about">
+    <section className="pt-20 md:pt-16 lg:pt-8 pb-12 md:pb-0 lg:pb-16 bg-white text-zinc-900 overflow-hidden relative" id="about">
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px]" />
