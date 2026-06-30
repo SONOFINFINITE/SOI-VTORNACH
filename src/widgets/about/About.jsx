@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Medal, BookOpen, Handshake, TrendUp, ShieldCheck } from '@phosphor-icons/react';
+import { CONTACT_INFO } from '@/shared/constants';
 
 const FEATURES = [
   {
@@ -70,7 +71,7 @@ export function About() {
             <div className="w-full aspect-[3/4] lg:aspect-auto rounded-[2.5rem] md:rounded-[3rem] overflow-hidden bg-zinc-100 border border-zinc-100 relative shadow-2xl flex-1">
               <img 
                 src="/ACMAN.png" 
-                alt="Василий Черепанов — Основатель компании" 
+                alt={`${CONTACT_INFO.ceo.fullName} — Основатель компании`} 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-80" />
@@ -81,7 +82,7 @@ export function About() {
                   CEO
                 </div>
                 <div>
-                  <div className="text-lg lg:text-xl font-bold tracking-tight text-white">Василий Черепанов</div>
+                  <div className="text-lg lg:text-xl font-bold tracking-tight text-white">{CONTACT_INFO.ceo.fullName}</div>
                   <div className="text-[10px] lg:text-xs font-bold uppercase tracking-widest text-white/70">Основатель компании</div>
                 </div>
               </div>
