@@ -1,6 +1,6 @@
 import { motion, useMotionValue, animate } from 'motion/react';
-import { ShieldCheck, CurrencyCircleDollar, ArrowRight } from '@phosphor-icons/react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { ArrowRight } from '@phosphor-icons/react';
 import { CONTACT_INFO } from '../../shared/constants';
 
 function Counter({ value, suffix = "" }) {
@@ -28,7 +28,7 @@ function Counter({ value, suffix = "" }) {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100dvh] md:min-h-0 flex items-center pt-32 lg:pt-52 pb-8 overflow-hidden bg-white" id="hero">
+    <section className="relative min-h-dvh md:min-h-0 flex items-center pt-32 lg:pt-52 pb-8 overflow-hidden bg-white" id="hero">
       {/* Background with Image behind slanted line */}
       <div className="absolute top-0 right-0 w-full lg:w-[60%] h-full pointer-events-none z-0">
         <div className="absolute inset-0 bg-zinc-50 -skew-x-12 translate-x-1/4 overflow-hidden border-l border-zinc-100">
@@ -41,8 +41,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Man Image - Only Desktop (XL+) */}
-      <div className="hidden xl:block absolute bottom-0 right-[-15%] w-[70%] h-full pointer-events-none z-20">
+      {/* Man Image - Only Desktop (XL+) — временно скрыто, пока нет фото */}
+      {/* <div className="hidden xl:block absolute bottom-0 right-[-15%] w-[70%] h-full pointer-events-none z-20">
         <motion.img 
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export function Hero() {
           alt="Юрист" 
           className="absolute bottom-0 right-0 h-[130%] w-auto object-contain object-bottom drop-shadow-2xl"
         />
-      </div>
+      </div> */}
       
       <div className="absolute top-[10%] left-[5%] w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
       
@@ -77,7 +77,7 @@ export function Hero() {
               <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
                 <a 
                   href={CONTACT_INFO.phone.link}
-                  className="w-full sm:w-auto bg-accent hover:bg-zinc-900 text-white px-8 py-4 rounded-full font-bold text-base md:text-lg transition-all flex items-center justify-center gap-3 group shadow-2xl shadow-accent/20 cursor-pointer"
+                  className="w-full sm:w-auto bg-accent hover:bg-zinc-900 text-white px-8 py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg transition-all flex items-center justify-center gap-3 group shadow-2xl shadow-accent/20 cursor-pointer"
                 >
                   Бесплатная консультация
                   <ArrowRight size={20} weight="bold" className="group-hover:translate-x-1 transition-transform" />

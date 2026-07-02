@@ -59,7 +59,7 @@ export function Faq() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`rounded-[2rem] border transition-all duration-500 ${
+                className={`rounded-4xl border transition-all duration-500 ${
                   isOpen 
                     ? 'bg-accent border-accent shadow-2xl shadow-accent/20' 
                     : 'bg-zinc-50 border-zinc-100 hover:border-zinc-200'

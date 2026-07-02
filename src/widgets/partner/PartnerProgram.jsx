@@ -29,7 +29,7 @@ export function PartnerProgram() {
     <section className="py-6 md:py-8 lg:py-10 bg-white overflow-hidden relative" id="partners">
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[40px_40px]" />
       </div>
 
       <div className="container-custom relative z-10 px-6">
@@ -64,7 +64,7 @@ export function PartnerProgram() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="p-6 md:p-8 lg:p-10 rounded-[1.5rem] md:rounded-[2.5rem] border border-zinc-100 bg-white shadow-sm flex flex-col sm:flex-row lg:flex-col justify-between items-center lg:items-stretch flex-grow gap-8 md:gap-10 lg:gap-8 partner-program-stats"
+              className="p-6 md:p-8 lg:p-10 rounded-3xl md:rounded-[2.5rem] border border-zinc-100 bg-white shadow-sm flex flex-col sm:flex-row lg:flex-col justify-between items-center lg:items-stretch grow gap-8 md:gap-10 lg:gap-8 partner-program-stats"
             >
               <div className="flex flex-col sm:flex-row lg:flex-row items-center justify-center lg:justify-start gap-4 md:gap-6 partner-program-stat-item group cursor-default">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-zinc-50 flex items-center justify-center shrink-0 group-hover:bg-accent/5 transition-colors">
@@ -117,7 +117,7 @@ export function PartnerProgram() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] bg-zinc-50 border border-zinc-100 hover:border-accent/20 transition-colors flex flex-col justify-between h-full text-center lg:text-left partner-program-cards"
+                className="p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-zinc-50 border border-zinc-100 hover:border-accent/20 transition-colors flex flex-col justify-between h-full text-center lg:text-left partner-program-cards"
               >
                 <div>
                   <div className="flex items-center justify-center lg:justify-start gap-3 md:gap-4 mb-4 md:mb-6">
@@ -136,7 +136,7 @@ export function PartnerProgram() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] bg-zinc-50 border border-zinc-100 hover:border-accent/20 transition-colors flex flex-col justify-between h-full text-center lg:text-left partner-program-cards"
+                className="p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-zinc-50 border border-zinc-100 hover:border-accent/20 transition-colors flex flex-col justify-between h-full text-center lg:text-left partner-program-cards"
               >
                 <div>
                   <div className="flex items-center justify-center lg:justify-start gap-3 md:gap-4 mb-4 md:mb-6">
@@ -155,7 +155,7 @@ export function PartnerProgram() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="sm:col-span-2 relative p-6 md:p-10 lg:p-14 rounded-[2rem] md:rounded-[3rem] bg-zinc-900 text-white overflow-hidden group min-h-[240px] md:min-h-[320px] flex items-center"
+                className="sm:col-span-2 relative p-6 md:p-10 lg:p-14 rounded-4xl md:rounded-[3rem] bg-zinc-900 text-white overflow-hidden group min-h-[240px] md:min-h-[320px] flex items-center"
               >
                 <div className="relative z-10 grid md:grid-cols-2 gap-6 md:gap-10 items-center w-full text-center lg:text-left partner-program-cards">
                   <div>
@@ -183,7 +183,7 @@ export function PartnerProgram() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-10 lg:mt-12 flex flex-col lg:flex-row items-center justify-between p-6 md:p-8 lg:p-10 rounded-[2rem] md:rounded-[3rem] bg-accent text-white shadow-2xl shadow-accent/20 relative overflow-hidden group partner-program-cta"
+          className="mt-10 lg:mt-12 flex flex-col lg:flex-row items-center justify-between p-6 md:p-8 lg:p-10 rounded-4xl md:rounded-[3rem] bg-accent text-white shadow-2xl shadow-accent/20 relative overflow-hidden group partner-program-cta"
         >
           <div className="relative z-10 mb-6 lg:mb-0 w-full lg:w-auto partner-program-cta-text">
             <div className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] opacity-80 mb-2 text-center lg:text-left">Ваша выгода при сотрудничестве</div>

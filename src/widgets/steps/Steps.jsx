@@ -117,7 +117,7 @@ export function Steps() {
             <h3 className="text-4xl md:text-5xl font-bold text-zinc-900 mb-8">Готовы начать новую главу?</h3>
             <a 
               href={CONTACT_INFO.phone.link}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 md:gap-3 bg-accent hover:bg-zinc-900 text-white px-6 md:px-10 py-4 md:py-5 rounded-full font-bold text-[15px] md:text-lg transition-all group shadow-2xl shadow-accent/20 whitespace-nowrap cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 md:gap-3 bg-accent hover:bg-zinc-900 text-white px-6 md:px-10 py-4 md:py-5 rounded-xl md:rounded-2xl font-bold text-[15px] md:text-lg transition-all group shadow-2xl shadow-accent/20 whitespace-nowrap cursor-pointer"
             >
               Бесплатная консультация
               <ArrowRight size={20} weight="bold" className="group-hover:translate-x-2 transition-transform shrink-0" />

@@ -1,5 +1,5 @@
 import { TelegramLogo, WhatsappLogo, Phone, EnvelopeSimple, MapPin } from '@phosphor-icons/react';
-import { CONTACT_INFO } from '../../shared/constants';
+import { CONTACT_INFO, COMPANY_INFO } from '../../shared/constants';
 
 const NAV_ITEMS = [
   { label: 'О компании', href: '#about' },
@@ -87,6 +87,17 @@ export function Footer() {
                 <div className="text-sm font-bold text-zinc-500 group-hover:text-accent transition-colors">{CONTACT_INFO.email}</div>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Company Legal Info */}
+      <div className="max-w-7xl mx-auto px-6 border-t border-zinc-100 pt-6 pb-2 md:pt-8 md:pb-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-zinc-400">
+          <span>{COMPANY_INFO.name}</span>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
+            <span>ИНН {COMPANY_INFO.inn}</span>
+            <span>ОГРН {COMPANY_INFO.ogrn}</span>
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import { Header } from '../../widgets/header/Header';
 import { Hero } from '../../widgets/hero/Hero';
-import { About } from '../../widgets/about/About';
+// Временная версия без фото основателя (переключить на About когда будут фото)
+import { AboutNoPhoto as About } from '../../widgets/about/AboutNoPhoto';
+// import { About } from '../../widgets/about/About';
 import { PartnerProgram } from '../../widgets/partner/PartnerProgram';
 import { Services } from '../../widgets/services/Services';
 import { Advantages } from '../../widgets/advantages/Advantages';

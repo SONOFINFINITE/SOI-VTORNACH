@@ -11,3 +11,9 @@ export const CONTACT_INFO = {
     fullName: 'Иван Иванов',
   },
 };
+
+export const COMPANY_INFO = {
+  name: 'ИП ЧЕРЕПАНОВ В. В.',
+  inn: '773373438205',
+  ogrn: '324774600329912',
+};

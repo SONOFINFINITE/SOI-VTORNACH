@@ -30,7 +30,7 @@ export function About() {
     <section className="pt-20 md:pt-16 lg:pt-8 pb-12 md:pb-0 lg:pb-16 bg-white text-zinc-900 overflow-hidden relative" id="about">
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[40px_40px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -68,7 +68,7 @@ export function About() {
             viewport={{ once: true }}
             className="lg:col-span-7 relative group flex"
           >
-            <div className="w-full aspect-[3/4] lg:aspect-auto rounded-[2.5rem] md:rounded-[3rem] overflow-hidden bg-zinc-100 border border-zinc-100 relative shadow-2xl flex-1">
+            <div className="w-full aspect-3/4 lg:aspect-auto rounded-[2.5rem] md:rounded-[3rem] overflow-hidden bg-zinc-100 border border-zinc-100 relative shadow-2xl flex-1">
               <img 
                 src="/ACMAN.png" 
                 alt={`${CONTACT_INFO.ceo.fullName} — Основатель компании`} 

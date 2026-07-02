@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { List, X, Phone } from '@phosphor-icons/react';
+import { List, X, Phone, TelegramLogo, WhatsappLogo } from '@phosphor-icons/react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { CONTACT_INFO } from '../../shared/constants';
@@ -99,7 +99,7 @@ export function Header() {
           </a>
           <a 
             href={CONTACT_INFO.phone.link}
-            className="header-cta-btn bg-accent hover:bg-accent-hover text-white px-3 xl:px-6 py-2 xl:py-3 rounded-full text-xs xl:text-base font-black transition-all hover:scale-105 active:scale-95 shadow-xl shadow-accent/20 cursor-pointer whitespace-nowrap"
+            className="header-cta-btn bg-accent hover:bg-accent-hover text-white px-3 xl:px-6 py-2 xl:py-3 rounded-xl xl:rounded-2xl text-xs xl:text-base font-black transition-all hover:scale-105 active:scale-95 shadow-xl shadow-accent/20 cursor-pointer whitespace-nowrap"
           >
             Консультация
           </a>
@@ -166,15 +166,43 @@ export function Header() {
       </AnimatePresence>
     </header>
 
-    {/* Floating Call Button for Mobile - Outside header for stable fixed positioning */}
-    <div className="fixed bottom-6 right-6 z-[60] xl:hidden pointer-events-auto">
+    {/* Floating Widgets - Bottom Right */}
+    <div className="fixed bottom-6 right-6 xl:bottom-8 xl:right-8 z-60 flex flex-col items-center gap-2 xl:gap-4 pointer-events-auto">
+      <motion.a
+        href={CONTACT_INFO.telegram}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="flex items-center justify-center w-11 h-11 xl:w-16 xl:h-16 bg-[#26A5E4] text-white rounded-full shadow-xl shadow-[#26A5E4]/30"
+      >
+        <TelegramLogo weight="fill" className="w-5.5 h-5.5 xl:w-8 xl:h-8" />
+      </motion.a>
+      <motion.a
+        href={CONTACT_INFO.whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="flex items-center justify-center w-11 h-11 xl:w-16 xl:h-16 bg-[#25D366] text-white rounded-full shadow-xl shadow-[#25D366]/30"
+      >
+        <WhatsappLogo weight="fill" className="w-5.5 h-5.5 xl:w-8 xl:h-8" />
+      </motion.a>
+      {/* Call Button - Mobile/Tablet only */}
       <motion.a
         href={CONTACT_INFO.phone.link}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.3 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="flex items-center justify-center w-14 h-14 bg-accent text-white rounded-full shadow-2xl shadow-accent/40 relative"
+        className="xl:hidden flex items-center justify-center w-11 h-11 bg-accent text-white rounded-full shadow-2xl shadow-accent/40 relative"
       >
         <motion.div
           animate={{ 
@@ -188,7 +216,7 @@ export function Header() {
           }}
           className="absolute inset-0 bg-accent rounded-full"
         />
-        <Phone size={28} weight="fill" className="relative z-10" />
+        <Phone weight="fill" className="relative z-10 w-5.5 h-5.5" />
       </motion.a>
     </div>
     </>
